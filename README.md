@@ -12,3 +12,37 @@ Now have algoritm:
    - Example:
      - Input: `10`
      - Output: `55`
+
+3. **Factorial**
+   - Calculate the factorial of a given number.
+   - Example:
+     - Input: `5`
+     - Output: `120`
+
+4. **Reverse String**
+   - Input a string and get its reverse.
+   - Example:
+     - Input: `hello`
+     - Output: `olleh`
+
+5. **Palindrome Check**
+   - Check if the input string is a palindrome (ignores spaces and case).
+   - Example:
+     - Input: `Race car`
+     - Output: `Palindrome`
+
+## Usage
+
+Run the script and choose an algorithm by name or number:
+
+```
+python train_algoritm.py
+```
+
+When prompted, enter one of the following:
+
+- `one` or `1` for Even or Odd
+- `two` or `2` for Sum of Numbers
+- `three` or `3` for Factorial
+- `four` or `4` for Reverse String
+- `five` or `5` for Palindrome Check
