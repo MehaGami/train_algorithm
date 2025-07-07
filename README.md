@@ -44,6 +44,13 @@ Now have algoritm:
      - Input: `1, 2, 3, 4, 5`
      - Output: `3.0`
 
+7. **Find Maximum Number in a List**
+
+   - Find the largest number in a list of numbers entered separated by commas or spaces.
+   - Example:
+     - Input: `1, 7, 3, 4, 5`
+     - Output: `7`
+
 ## Usage
 
 Run the script and choose an algorithm by name or number:
@@ -60,3 +67,4 @@ When prompted, enter one of the following:
 - `four` or `4` for Reverse String
 - `five` or `5` for Palindrome Check
 - `six` or `6` for Average of Numbers in a List
+- `seven` or `7` for Find Maximum Number in a List

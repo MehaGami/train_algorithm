@@ -72,6 +72,22 @@ def six():
 
     return result / len(list_of_numbers)
 
+def seven():
+    try:
+        input_numbers = input("Write numbers separated by commas: ")
+        tokens = re.split(r"[,\s]+", input_numbers.strip())
+        list_of_numbers = [int(x) for x in tokens if x]
+    except ValueError:
+        return "Incorrect parameter"
+    
+    result = list_of_numbers[0]
+
+    for number in list_of_numbers:
+        if result < number:
+            result = number
+
+    return result
+
 
 # dictionary of all algoritms
 algoritms = {
@@ -87,6 +103,8 @@ algoritms = {
     "5" : five,
     "six" : six, 
     "6" : six,
+    "seven" : seven,
+    "7" : seven,
 }
 
 chose_algoritm()
