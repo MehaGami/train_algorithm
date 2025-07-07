@@ -1,3 +1,4 @@
+import re
 
 def chose_algoritm() :
     algoritm = input("Write algoritm number(one, two, three ... etc): ")
@@ -55,6 +56,22 @@ def five():
         return "Palindrome"
     else:
         return "Not a palindrome"
+    
+def six():
+    try:
+        input_numbers = input("Write numbers separated by commas: ")
+        tokens = re.split(r"[,\s]+", input_numbers.strip())
+        list_of_numbers = [int(x) for x in tokens if x]
+    except ValueError:
+        return "Incorrect parameter"
+    
+    result = 0
+
+    for number in list_of_numbers:
+        result += number
+
+    return result / len(list_of_numbers)
+
 
 # dictionary of all algoritms
 algoritms = {
@@ -68,6 +85,8 @@ algoritms = {
     "4" : four,
     "five" : five,
     "5" : five,
+    "six" : six, 
+    "6" : six,
 }
 
 chose_algoritm()
