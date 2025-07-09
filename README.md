@@ -59,6 +59,20 @@ Now have algoritm:
      - Input number to count: `2`
      - Output: `3`
 
+9. **Get Even Numbers from a List**
+
+   - Return all even numbers from a list entered separated by commas or spaces.
+   - Example:
+     - Input: `1, 2, 3, 4, 5, 6`
+     - Output: `2, 4, 6`
+
+10. **Get Unique Numbers from a List**
+
+    - Return all unique numbers from a list entered separated by commas or spaces, preserving their order.
+    - Example:
+      - Input: `1, 2, 2, 3, 4, 3, 5`
+      - Output: `1, 2, 3, 4, 5`
+
 ## Usage
 
 Run the script and choose an algorithm by name or number:
@@ -77,3 +91,5 @@ When prompted, enter one of the following:
 - `six` or `6` for Average of Numbers in a List
 - `seven` or `7` for Find Maximum Number in a List
 - `eight` or `8` for Count Occurrences of a Number in a List
+- `nine` or `9` for Get Even Numbers from a List
+- `ten` or `10` for Get Unique Numbers from a List

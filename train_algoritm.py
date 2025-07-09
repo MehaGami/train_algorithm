@@ -105,6 +105,37 @@ def eight():
 
     return count_of_target
 
+def nine():
+    try:
+        input_numbers = input("Write numbers separated by commas: ")
+        tokens = re.split(r"[,\s]+", input_numbers.strip())
+        list_of_numbers = [int(x) for x in tokens if x]
+    except ValueError:
+        return "Incorrect parameter"
+    
+    even_numbers_list = []
+    
+    for number in list_of_numbers:
+        if number % 2 == 0:
+            even_numbers_list.append(number)
+    
+    return ", ".join(map(str, even_numbers_list))
+
+def ten():
+    try:
+        input_numbers = input("Write numbers separated by commas: ")
+        tokens = re.split(r"[,\s]+", input_numbers.strip())
+        list_of_numbers = [int(x) for x in tokens if x]
+    except ValueError:
+        return "Incorrect parameter"
+    
+    uniq_numbers_list = []
+    
+    for number in list_of_numbers:
+        if number not in uniq_numbers_list:
+            uniq_numbers_list.append(number)
+    
+    return ", ".join(map(str, uniq_numbers_list))
 
 # dictionary of all algoritms
 algoritms = {
@@ -124,6 +155,10 @@ algoritms = {
     "7" : seven,
     "eight" : eight,
     "8" : eight,
+    "nine" : nine,
+    "9" : nine,
+    "ten" : ten,
+    "10" : ten,
 }
 
 chose_algoritm()
