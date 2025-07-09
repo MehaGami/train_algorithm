@@ -88,6 +88,23 @@ def seven():
 
     return result
 
+def eight():
+    try:
+        input_numbers = input("Write numbers separated by commas: ")
+        tokens = re.split(r"[,\s]+", input_numbers.strip())
+        list_of_numbers = [int(x) for x in tokens if x]
+    except ValueError:
+        return "Incorrect parameter"
+    
+    try:
+        target = int(input("write number: "))
+    except ValueError:
+        return "Incorrect parameter"
+    
+    count_of_target = list_of_numbers.count(target)
+
+    return count_of_target
+
 
 # dictionary of all algoritms
 algoritms = {
@@ -105,6 +122,8 @@ algoritms = {
     "6" : six,
     "seven" : seven,
     "7" : seven,
+    "eight" : eight,
+    "8" : eight,
 }
 
 chose_algoritm()
