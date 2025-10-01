@@ -1,6 +1,63 @@
-# train_algorithm
+# Train Algorithm
 
-Available algorithms:
+A collection of educational algorithms in Python for practicing basic programming concepts.
+
+## 📋 Requirements
+
+- Python 3.6 or higher
+
+## 🚀 Installation and Setup
+
+### Step 1: Clone the repository (if needed)
+
+```bash
+git clone <repository-url>
+cd train_algoritm
+```
+
+### Step 2: Create a virtual environment
+
+```bash
+python3 -m venv venv
+```
+
+### Step 3: Activate the virtual environment
+
+**On macOS/Linux:**
+
+```bash
+source venv/bin/activate
+```
+
+**On Windows:**
+
+```bash
+venv\Scripts\activate
+```
+
+After activation, you'll see `(venv)` at the beginning of your terminal prompt.
+
+### Step 4: Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 5: Run the program
+
+```bash
+python train_algorithm.py
+```
+
+### Deactivate the virtual environment
+
+When you're done working:
+
+```bash
+deactivate
+```
+
+## 📝 Available Algorithms
 
 1. **Even or Odd**
 
@@ -73,11 +130,24 @@ Available algorithms:
       - Input: `1, 2, 2, 3, 4, 3, 5`
       - Output: `1, 2, 3, 4, 5`
 
-## Usage
+11. **NBU Currency Exchange Rates**
+
+    - Fetch current exchange rates from the National Bank of Ukraine API for USD and EUR.
+    - No input required - automatically displays current rates.
+    - Example output:
+      ```
+      ┌─────────────────────────┐
+      │ 💰 Currency: USD        │
+      │ 💵 Exchange: 41.2215    │
+      │ 📅 Date: 02.10.2025     │
+      └─────────────────────────┘
+      ```
+
+## 💡 Usage
 
 Run the script and choose an algorithm by name or number:
 
-```
+```bash
 python train_algorithm.py
 ```
 
@@ -93,3 +163,55 @@ When prompted, enter one of the following:
 - `eight` or `8` for Count Occurrences of a Number in a List
 - `nine` or `9` for Get Even Numbers from a List
 - `ten` or `10` for Get Unique Numbers from a List
+- `eleven` or `11` for NBU Currency Exchange Rates
+
+## 📖 Examples
+
+### Example 1: Palindrome Check
+
+```bash
+$ python train_algorithm.py
+Write algorithm number(one, two, three ... etc): five
+Write string: Race car
+Palindrome
+```
+
+### Example 2: NBU Currency Rates
+
+```bash
+$ python train_algorithm.py
+Write algorithm number(one, two, three ... etc): 11
+┌─────────────────────────┐
+│ 💰 Currency: USD        │
+│ 💵 Exchange: 41.2215    │
+│ 📅 Date: 02.10.2025     │
+└─────────────────────────┘
+
+┌─────────────────────────┐
+│ 💰 Currency: EUR        │
+│ 💵 Exchange: 48.3734    │
+│ 📅 Date: 02.10.2025     │
+└─────────────────────────┘
+```
+
+## 🛠️ Project Structure
+
+```
+train_algoritm/
+├── README.md              # Project documentation
+├── train_algorithm.py     # Main program with all algorithms
+├── requirements.txt       # Python dependencies
+└── venv/                  # Virtual environment (created by you)
+```
+
+## 📚 Notes
+
+- Most algorithms use only Python's standard library (`re` module for regex)
+- Algorithm #11 requires the `requests` library for API calls to NBU
+- External packages are listed in `requirements.txt`
+- Virtual environment is recommended but optional
+- All algorithms include basic error handling for invalid inputs
+
+## 📄 License
+
+This is an educational project for learning purposes.

@@ -1,12 +1,16 @@
 import re
+import requests
+import json
 
 def choose_algorithm() :
     algorithm = input("Write algorithm number(one, two, three ... etc): ")
-    print(algorithms.get(algorithm, lambda: "Incorrect algorithm")())
+    result = algorithms.get(algorithm, lambda: "Incorrect algorithm")()
+    if result is not None:
+        print(result)
 
 def one() :
     try:
-        number = int(input("write number: "))
+        number = int(input("Write number: "))
     except ValueError:
         return "Incorrect parameter"
     
@@ -18,7 +22,7 @@ def one() :
 def two():
 
     try:
-        number = int(input("write number: "))
+        number = int(input("Write number: "))
     except ValueError:
         return "Incorrect parameter"
     
@@ -31,7 +35,7 @@ def two():
 def three():
 
     try:
-        number = int(input("write number: "))
+        number = int(input("Write number: "))
     except ValueError:
         return "Incorrect parameter"
     
@@ -46,12 +50,12 @@ def three():
 
 def four():
 
-    string = input("write string: ")
+    string = input("Write string: ")
     return string[::-1]
 
 def five():
     
-    string = input("write string: ").replace(" ", "").lower()
+    string = input("Write string: ").replace(" ", "").lower()
     if string == string[::-1]:
         return "Palindrome"
     else:
@@ -103,7 +107,7 @@ def eight():
         return "Incorrect parameter"
     
     try:
-        target = int(input("write number: "))
+        target = int(input("Write number: "))
     except ValueError:
         return "Incorrect parameter"
     
@@ -143,6 +147,18 @@ def ten():
     
     return ", ".join(map(str, uniq_numbers_list))
 
+def eleven():
+    currency = ['USD', 'EUR']
+    for currency in currency:
+        currency_data = requests.get(f'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode={currency}&json')
+        currency_data = currency_data.json()[0]
+        print("┌" + "─" * 25 + "┐")
+        print(f"│ 💰 Currency: {currency_data['cc']:<10} │")
+        print(f"│ 💵 Exchange: {currency_data['rate']:<10} │")
+        print(f"│ 📅 Date: {currency_data['exchangedate']:<14} │")
+        print("└" + "─" * 25 + "┘")
+        print()
+
 # dictionary of all algorithms
 algorithms = {
     "one" : one,
@@ -165,6 +181,8 @@ algorithms = {
     "9" : nine,
     "ten" : ten,
     "10" : ten,
+    "eleven" : eleven,
+    "11" : eleven,
 }
 
 choose_algorithm()
