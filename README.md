@@ -143,6 +143,17 @@ deactivate
       └─────────────────────────┘
       ```
 
+12. **🎯 Two Sum (LeetCode #1)**
+
+    - Classic LeetCode problem for algorithm practice.
+    - Given an array of integers and a target sum, find the indices of two numbers that add up to the target.
+    - Uses nested loops approach (Brute Force) with O(n²) time complexity.
+    - Great for learning array manipulation and enumerate() function.
+    - Example:
+      - Input numbers: `2, 7, 11, 15`
+      - Input target: `9`
+      - Output: `0 1` (because nums[0] + nums[1] = 2 + 7 = 9)
+
 ## 💡 Usage
 
 Run the script and choose an algorithm by name or number:
@@ -164,6 +175,7 @@ When prompted, enter one of the following:
 - `nine` or `9` for Get Even Numbers from a List
 - `ten` or `10` for Get Unique Numbers from a List
 - `eleven` or `11` for NBU Currency Exchange Rates
+- `twelve` or `12` for Two Sum (LeetCode #1)
 
 ## 📖 Examples
 

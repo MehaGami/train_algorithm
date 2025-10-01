@@ -159,6 +159,26 @@ def eleven():
         print("└" + "─" * 25 + "┘")
         print()
 
+def twelve():
+    try:
+        input_numbers = input("Write numbers separated by commas: ")
+        tokens = re.split(r"[,\s]+", input_numbers.strip())
+        list_of_numbers = [int(x) for x in tokens if x]
+    except ValueError:
+        return "Incorrect parameter"
+    
+    try:
+        target = int(input("Write target number: "))
+    except ValueError:
+        return "Incorrect parameter"
+
+    for first_index, first_number in enumerate(list_of_numbers):
+        for second_index, second_numbers in enumerate(list_of_numbers[first_index + 1:], start=first_index + 1):
+            if target == first_number + second_numbers:
+                return [first_index, second_index]
+    
+    return "No solution found"
+
 # dictionary of all algorithms
 algorithms = {
     "one" : one,
@@ -183,6 +203,8 @@ algorithms = {
     "10" : ten,
     "eleven" : eleven,
     "11" : eleven,
+    "twelve" : twelve,
+    "12" : twelve,
 }
 
 choose_algorithm()
