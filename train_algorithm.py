@@ -1,8 +1,8 @@
 import re
 
-def chose_algoritm() :
-    algoritm = input("Write algoritm number(one, two, three ... etc): ")
-    print(algoritms.get(algoritm, lambda: "Incorrect algoritm")())
+def choose_algorithm() :
+    algorithm = input("Write algorithm number(one, two, three ... etc): ")
+    print(algorithms.get(algorithm, lambda: "Incorrect algorithm")())
 
 def one() :
     try:
@@ -137,8 +137,8 @@ def ten():
     
     return ", ".join(map(str, uniq_numbers_list))
 
-# dictionary of all algoritms
-algoritms = {
+# dictionary of all algorithms
+algorithms = {
     "one" : one,
     "1" : one,
     "two" : two,
@@ -161,4 +161,4 @@ algoritms = {
     "10" : ten,
 }
 
-chose_algoritm()
+choose_algorithm()

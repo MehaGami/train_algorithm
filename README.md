@@ -1,6 +1,6 @@
-# train_algoritm
+# train_algorithm
 
-Now have algoritm:
+Available algorithms:
 
 1. **Even or Odd**
 
@@ -78,7 +78,7 @@ Now have algoritm:
 Run the script and choose an algorithm by name or number:
 
 ```
-python train_algoritm.py
+python train_algorithm.py
 ```
 
 When prompted, enter one of the following:
