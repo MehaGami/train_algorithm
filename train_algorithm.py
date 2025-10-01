@@ -65,6 +65,9 @@ def six():
     except ValueError:
         return "Incorrect parameter"
     
+    if len(list_of_numbers) == 0:
+        return "List is empty, cannot calculate average"
+
     result = 0
 
     for number in list_of_numbers:
@@ -80,6 +83,9 @@ def seven():
     except ValueError:
         return "Incorrect parameter"
     
+    if len(list_of_numbers) == 0:
+        return "List is empty, cannot find maximum number"
+
     result = list_of_numbers[0]
 
     for number in list_of_numbers:
